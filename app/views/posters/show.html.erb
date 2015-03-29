@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is in use:</strong>
+  <%= @poster.is_in_use %>
+</p>
+<p>
+  <strong>Image</strong>
+  <%= image_tag @poster.image.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_poster_path(@poster) %> |
+<%= link_to 'Back', posters_path %>
