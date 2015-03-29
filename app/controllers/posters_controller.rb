@@ -69,6 +69,6 @@ class PostersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poster_params
-      params.require(:poster).permit(:is_in_use, :image)
+      params.require(:poster).permit(:is_in_use, :image, :description)
     end
 end
