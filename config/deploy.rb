@@ -3,6 +3,7 @@ lock '3.4.0'
 
 set :application, '19xuetang'
 set :repo_url, 'git@github.com:lanch/xuetang.git'
+set :passenger_restart_command, '/usr/local/rvm/bin/rvm default do passenger-config restart-app'
 set :passenger_restart_with_sudo, true
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
