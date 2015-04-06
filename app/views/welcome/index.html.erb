@@ -35,26 +35,18 @@
 <br/>
 <div class="row">
   <div class="col-md-2">
-    <ul>
-      <li>初一</li>
-      <li>
-        <ul>
-          <li>物理</li>
-          <li>化学</li>
-          <li>数学</li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li>初二</li>
-      <li>
-        <ul>
-          <li>物理</li>
-          <li>化学</li>
-          <li>数学</li>
-        </ul>
-      </li>
-    </ul>
+    <dl class="">
+      <dt>初一</dt>
+      <dd>物理</dd>
+      <dd>化学</dd>
+      <dd>数学</dd>
+    </dl>
+    <dl>
+      <dt>初二</dt>
+      <dd>物理</dd>
+      <dd>化学</dd>
+      <dd>数学</dd>
+    </dl>
   </div>
   <div class="col-md-8">
     <% @teachers.each_with_index do | teacher, index | %>
@@ -72,7 +64,7 @@
     <% end %>
   </div>
   <div class="col-md-2">
-    <ul>
+    <ul class="list-unstyled">
       <li>我校引入名师李群</li>
       <li>我校引入名师李群</li>
       <li>我校引入名师李群</li>
