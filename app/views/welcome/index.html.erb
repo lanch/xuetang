@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-12">
 <div id="carousel-index-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -12,7 +12,7 @@
   <div class="carousel-inner" role="listbox">
     <% @posters.each_with_index do |poster, index| %>
       <div class="item <% if index == 0 %>active <% end %>">
-        <img src="<%= poster.image.url(:large) %>" alt="">
+        <img src="<%= poster.image.url(:xl) %>" alt="">
         <div class="carousel-caption">
           <%= poster.description %>
         </div>
@@ -31,4 +31,53 @@
   </a>
 </div>
 </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-2">
+    <ul>
+      <li>初一</li>
+      <li>
+        <ul>
+          <li>物理</li>
+          <li>化学</li>
+          <li>数学</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>初二</li>
+      <li>
+        <ul>
+          <li>物理</li>
+          <li>化学</li>
+          <li>数学</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <% @teachers.each_with_index do | teacher, index | %>
+      <% if index % 4 == 0 %>
+       <div class="row">
+      <% end %>
+        <div class="col-md-3">
+          <%= image_tag teacher.avatar.url(:thumb) %>
+          <%= teacher.name %>
+        </div> 
+      <% if (index % 4 == 3 || index == @teachers.size() - 1) %>
+        </div>
+        <br>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <ul>
+      <li>我校引入名师李群</li>
+      <li>我校引入名师李群</li>
+      <li>我校引入名师李群</li>
+      <li>我校引入名师李群</li>
+      <li>我校引入名师李群</li>
+    </ul>
+  </div>
 </div>

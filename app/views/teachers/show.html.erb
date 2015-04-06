@@ -10,5 +10,14 @@
   <%= @teacher.description %>
 </p>
 
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag @teacher.avatar.url(:medium) %>
+</p>
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag @teacher.avatar.url(:thumb) %>
+</p>
+
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>

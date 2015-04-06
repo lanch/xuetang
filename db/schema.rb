@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329153628) do
+ActiveRecord::Schema.define(version: 20150406130309) do
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "address"
+    t.string   "address_baidu_map"
+    t.date     "begin_date"
+    t.date     "end_date"
+    t.string   "schedule_time"
+    t.string   "grade"
+    t.string   "subject"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "posters", force: :cascade do |t|
     t.boolean  "is_in_use"
@@ -25,5 +39,16 @@ ActiveRecord::Schema.define(version: 20150329153628) do
   end
 
   add_index "posters", ["is_in_use"], name: "index_posters_on_is_in_use"
+
+  create_table "teachers", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
 
 end

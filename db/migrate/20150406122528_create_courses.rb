@@ -4,7 +4,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :address
-      t.url :address_baidu_map
+      t.string :address_baidu_map
       t.date :begin_date
       t.date :end_date
       t.string :schedule_time
