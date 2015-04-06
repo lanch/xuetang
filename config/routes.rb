@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :courses
+  resources :teachers
+  resources :courses
   resources :posters
   get 'welcome/index'
 

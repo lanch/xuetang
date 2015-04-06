@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @course.address %>
+</p>
+
+<p>
+  <strong>Address baidu map:</strong>
+  <%= @course.address_baidu_map %>
+</p>
+
+<p>
+  <strong>Begin date:</strong>
+  <%= @course.begin_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @course.end_date %>
+</p>
+
+<p>
+  <strong>Schedule time:</strong>
+  <%= @course.schedule_time %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @course.grade %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @course.subject %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
